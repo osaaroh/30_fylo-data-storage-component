@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+
+    --font-raleway: 'Raleway', sans-serif;
+}
+
+body{
+    /* background: var(--very-dark-blue) url(../images/bg-desktop.png) 100% 50%; */
+    background-color: var(--very-dark-blue);
+    background-image: url(../images/bg-desktop.png);
+    background-size: 100% 50%;
+    background-position: right 0 bottom 0;
+    background-repeat: no-repeat;
+    color: var(--pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--font-raleway);
+    padding: 1rem;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1440px;
+    gap: 3rem;
+}
+
+.progress-card, .shortcuts-card{
+    background: var(--dark-blue);
+    padding: 3rem;
+    border-radius: 4px;
+}
+
+.shortcuts-card{
+    background: var(--dark-blue);
+    padding-right: 8rem;
+    border-top-right-radius: 80px;
+}
+
+.icon-btns__wrapper{
+    margin-top: 2rem;
+}
+.icon-wrapper{
+    /* padding: 1rem; */
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+    background: var(--very-dark-blue);
+    border-radius: 4px;
+}
+
+.icon-btns__wrapper, .icon-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-btns__wrapper{
+    gap: 1rem;
+}
+
+.progress-card{
+    width: 50%;
+    height: fit-content;
+    align-self: flex-end;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.progress-card__amount-used span{
+    font-weight: 700;
+}
+
+.progress-card__amount-left{
+    position: absolute;
+    top: -2rem;
+    right: 2rem;
+    padding: 1rem;
+    background: var(--pale-blue);
+    color: var(--very-dark-blue);
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 0.5rem;
+}
+
+.progress-card__amount-left::before {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 20px;
+    background-color: var(--pale-blue);
+    clip-path: polygon(50% 0%, 100% 100%, 100% 0);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(50%);
+}
+.progress-card__amount-left span{
+font-size: 2rem;
+font-weight: 700;
+}
+
+.progressBar {
+    min-height: 15px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    align-items: center;
+}
+
+.progressBar-inner {
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    width: 85%;
+    height: 12px;
+    margin: 2px;
+    border-radius: 50px;
+    display: grid;
+    place-content: end;
+}
+
+.inner-circle {
+    height: 11px;
+    width: 11px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+#progressBar__label{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        background-image: url(../images/bg-mobile.png);
+        background-size: cover;
+        min-height: 100%;
+    }
+    main{
+        flex-direction: column;
+    }
+    .progress-card, .shortcuts-card{
+        background: var(--dark-blue);
+        padding: 2rem;
+        border-radius: 4px;
+    }
+    
+    .shortcuts-card{
+        width: 100%;
+        background: var(--dark-blue);
+        padding-right: 5rem;
+        border-top-right-radius: 80px;
+    }
+    
+    .progress-card{
+        width: 100%;
+        height: fit-content;
+        align-self: flex-end;
+        position: relative;
+        display: flex;
+    }
+
+    .progress-card__amount-left{
+        position: absolute;
+        top: unset;
+        bottom: -2rem;
+        padding: 1rem;
+        background: var(--pale-blue);
+        color: var(--very-dark-blue);
+        text-transform: uppercase;
+        font-size: 13px;
+        border-radius: 0.5rem;
+
+        left:0;
+        right:0;
+      
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+
+    .progress-card__amount-left::before {
+        display: none;
+    }
+}
