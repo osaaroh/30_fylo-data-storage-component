@@ -178,7 +178,7 @@ font-weight: 700;
     .progress-card__amount-left{
         position: absolute;
         top: unset;
-        bottom: -2rem;
+        bottom: -2.65rem;
         padding: 1rem;
         background: var(--pale-blue);
         color: var(--very-dark-blue);
