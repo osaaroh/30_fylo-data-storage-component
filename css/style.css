@@ -173,6 +173,7 @@ font-weight: 700;
         align-self: flex-end;
         position: relative;
         display: flex;
+        margin-bottom: 4rem;
     }
 
     .progress-card__amount-left{
