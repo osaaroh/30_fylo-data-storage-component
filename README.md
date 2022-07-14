@@ -20,13 +20,12 @@
 Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
-- Navigate the slider using either their mouse/trackpad or keyboard
 
 
 
 ### Links
 
-- Live Site URL: [Live Demo](#)
+- Live Site URL: [Live Demo](https://fylo-data-storage-component-o.netlify.app/)
 
 ## My process
 
